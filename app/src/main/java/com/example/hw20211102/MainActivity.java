@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     RadioGroup rdg1, rdg2;
     RadioButton rd1, rd2, rd3, rd4, rd5, rd6;
     Spinner sp1;
-    TextView txt1, txt2, txt3, txt4;
+    TextView txt1, txt2, txt3, txt4,txt5,txt6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
         txt2 = (TextView) findViewById(R.id.txt2);
         txt3 = (TextView) findViewById(R.id.txt3);
         txt4 = (TextView) findViewById(R.id.txt4);
+        txt5 = (TextView) findViewById(R.id.txt5);
+        txt6 = (TextView) findViewById(R.id.txt6);
 
         rd1 = (RadioButton) findViewById(R.id.rd1);
         rd2 = (RadioButton) findViewById(R.id.rd2);
@@ -65,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         public void onCheckedChanged(RadioGroup group, int checkedId) {
             String a = "";
             RadioButton su = (RadioButton) findViewById(checkedId);
-            txt4.setText("糖分是" + su.getText());
+            txt5.setText("糖分是" + su.getText());
         }
     };
     private RadioGroup.OnCheckedChangeListener myrad2 = new RadioGroup.OnCheckedChangeListener() {
@@ -73,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         public void onCheckedChanged(RadioGroup group, int checkedId) {
             String a = "";
             RadioButton cd = (RadioButton) findViewById(checkedId);
-            txt4.setText("冰塊是" + cd.getText());
+            txt6.setText("冰塊是" + cd.getText());
         }
     };
 
